@@ -1,4 +1,23 @@
+/* theme */
+.light {
+  background: rgb(120, 120, 120);
+}
+
+.dark {
+ background: rgb(0, 0, 0);
+}
+
 /* layout */
+html, body, #app {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+}
+
 .row {
   display: flex;
   flex-direction: row;
@@ -15,6 +34,14 @@
 
 
 /* elements */
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
 .link {
   color: #eee;
   font-size: 20px;
