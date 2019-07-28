@@ -58,7 +58,7 @@ export default class User extends React.Component {
 
 
     return (
-      <div className='card user'>
+      <div className='card'>
         <UserProfile {...user} />
         <ul>
           {stories.length > 0 && stories.map((story) => (

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Nav from './components/Nav';
 import Top from './components/Top';
+import New from './components/New';
 import User from './components/User';
 
 import { ThemeProvider } from './contexts/theme';
@@ -30,7 +31,7 @@ class App extends React.Component {
               <Route exact path='/' component={Top} />
               <Route exact path='/top' component={Top} />
               <Route exact path='/user' component={User} />
-
+              <Route exact path='/new' component={New} />
             </Switch>
           </Router>
         </div>

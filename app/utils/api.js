@@ -1,10 +1,11 @@
 const endpoint = window.encodeURI(`https://hacker-news.firebaseio.com/v0`);
 const topStories = `topstories.json`;
+const newStories = `newstories.json`;
 const story = `item`;
 const user = `user`;
 
-export function getTopStoriesIds (max) {
-  return fetch(`${endpoint}/${topStories}`)
+export function getStoryIds (typeStory, max) {
+  return fetch(`${endpoint}/${typeStory}`)
     .then((res) => res.json())
     .then((data) => data.slice(0, max));
 }
@@ -31,7 +32,15 @@ export function getStory (id) {
 }
 
 export function getTopStories (max=50) {
-  return getTopStoriesIds(max)
+  return getStoryIds(topStories, max)
+    .then((ids) => (
+      Promise.all(ids.map(getStory))
+        .then((stories) => stories)
+    ))
+}
+
+export function getNewStories (max=50) {
+  return getStoryIds(newStories, max)
     .then((ids) => (
       Promise.all(ids.map(getStory))
         .then((stories) => stories)
