@@ -8,8 +8,8 @@ const activeStyle = {
 
 export default function Nav () {
   return (
-    <div className='row space-between'>
-      <ul>
+    <nav className='row space-between'>
+      <ul className='nav'>
         <li>
           <NavLink
             to='/top'
@@ -29,6 +29,6 @@ export default function Nav () {
           </NavLink>
         </li>
       </ul>
-    </div>
+    </nav>
   );
 }

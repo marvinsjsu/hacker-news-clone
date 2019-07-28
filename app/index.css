@@ -8,11 +8,33 @@
   align-items: space-between;
 }
 
-
+.center {
+  align-items: center;
+}
 
 
 
 /* elements */
 .link {
   color: #eee;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.loading {
+  font-size: 20px;
+  color: red;
+}
+
+.nav {
+  list-style-type: none;
+}
+
+.nav li {
+  display: inline-block;
+  padding: 10px;
 }
