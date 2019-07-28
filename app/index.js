@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Nav from './components/Nav';
 import Top from './components/Top';
 
+import './index.css';
+
 class App extends React.Component {
   render () {
     return (
@@ -12,6 +14,7 @@ class App extends React.Component {
           <Nav />
           <Switch>
             <Route exact path='/' component={Top} />
+            <Route exact path='/top' component={Top} />
           </Switch>
         </Router>
       </div>
