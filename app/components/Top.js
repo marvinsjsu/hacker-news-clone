@@ -5,37 +5,33 @@ import StoryCard from './StoryCard';
 
 export default class Top extends React.Component {
   state = {
-    items: []
+    stories: []
   };
 
   componentDidMount () {
     getTopStories()
-      .then((data) => this.setState({ items: data }));
+      .then((data) => this.setState({ stories: data }));
   }
 
   render () {
-    const { items } = this.state;
-    console.log('items: ', items);
-    if (items.length <= 0) {
+    const { stories } = this.state;
+
+    if (stories.length <= 0) {
       return (
-        <div className='row center center-text'>
-          <Loading text='Fetching'/>
-        </div>
+        <Loading text='Fetching'/>
       );
     }
 
     return (
-      <div>
-        <ul>
-        {items && items.length > 0 && (
-          items.map((story) => (
-            <li key={story.id} className='row story'>
-              <StoryCard {...story} />
-            </li>
-          ))
-        )}
-        </ul>
-      </div>
+      <ul>
+      {stories && stories.length > 0 && (
+        stories.map((story) => (
+          <li key={story.id} className='row story'>
+            <StoryCard {...story} />
+          </li>
+        ))
+      )}
+      </ul>
     );
   }
 }

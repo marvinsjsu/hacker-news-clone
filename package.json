@@ -24,6 +24,7 @@
     "copy-webpack-plugin": "^5.0.4",
     "moment": "^2.24.0",
     "prop-types": "^15.7.2",
+    "query-string": "^6.8.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1"

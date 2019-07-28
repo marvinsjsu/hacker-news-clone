@@ -32,7 +32,9 @@ export default class Loading extends React.Component {
     const { loading } = this.state;
 
     return (
-      <p className='row center center-text loading'>{loading}</p>
+      <div className='row center center-text'>
+        <p className='row center center-text loading'>{loading}</p>
+      </div>
     );
   }
 }
