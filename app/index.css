@@ -17,6 +17,8 @@
 /* elements */
 .link {
   color: #eee;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 .center-text {
@@ -26,4 +28,13 @@
 .loading {
   font-size: 20px;
   color: red;
+}
+
+.nav {
+  list-style-type: none;
+}
+
+.nav li {
+  display: inline-block;
+  padding: 10px;
 }
