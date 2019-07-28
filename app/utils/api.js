@@ -1,0 +1,1 @@
+const endpoint = `https://hacker-news.firebaseio.com/v0`;

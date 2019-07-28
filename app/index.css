@@ -8,11 +8,22 @@
   align-items: space-between;
 }
 
-
+.center {
+  align-items: center;
+}
 
 
 
 /* elements */
 .link {
   color: #eee;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.loading {
+  font-size: 20px;
+  color: red;
 }
