@@ -1,6 +1,12 @@
 /* theme */
+
+.light, .dark {
+  height: 100%;
+  width: 100%;
+}
+
 .light {
-  background: rgb(120, 120, 120);
+  background: #B7CECE;
 }
 
 .dark {
@@ -12,6 +18,7 @@ html, body, #app {
   margin: 0;
   height: 100%;
   width: 100%;
+  box-sizing: border-box;
 }
 
 body {
@@ -21,14 +28,18 @@ body {
 .row {
   display: flex;
   flex-direction: row;
+  padding: 0 20px;
 }
 
 .space-between {
+  display: flex;
+  justify-content: space-between;
   align-items: space-between;
 }
 
 .center {
   align-items: center;
+  justify-content: center;
 }
 
 
@@ -43,7 +54,7 @@ li {
 }
 
 .link {
-  color: #eee;
+  color: #6E7E85;
   font-size: 20px;
   text-decoration: none;
 }
@@ -54,7 +65,20 @@ li {
 
 .loading {
   font-size: 20px;
-  color: red;
+  color: #FF0000;
+}
+
+.btn {
+  font-size: 30px;
+}
+
+.btn-clear {
+  background: transparent;
+  border: none;
+}
+
+.btn-light, .btn-dark {
+  background: inherit;
 }
 
 .nav {

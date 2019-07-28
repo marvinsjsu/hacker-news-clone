@@ -11,7 +11,9 @@ export default class Top extends React.Component {
 
     if (items.length <= 0) {
       return (
-        <Loading text='Fetching'/>
+        <div className='row center center-text'>
+          <Loading text='Fetching'/>
+        </div>
       );
     }
 
