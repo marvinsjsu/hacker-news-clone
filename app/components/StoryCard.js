@@ -34,7 +34,7 @@ export default function StoryCard ({ by, title, kids, score, time, url }) {
               {` `}
               on {dateTime}
               {` `}
-              with {kids && kids.length > 0 && `${kids.length} comments`}
+              {kids && kids.length > 0 && `with ${kids.length} comments`}
             </li>
           </ul>
         </div>
