@@ -14,13 +14,13 @@ export default class Loading extends React.Component {
 
   componentDidMount () {
     const { text, speed=300 } = this.props;
-    console.log('text: ', text);
+
     this.loadingInterval = window.setInterval(() => {
       this.setState(({ loading }) => ({
         loading: loading === text + '...'
           ? text
           : loading + '.'
-      }), () => console.log(this.state));
+      }));
     }, speed);
   }
 

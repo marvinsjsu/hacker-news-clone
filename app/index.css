@@ -53,9 +53,14 @@ li {
   list-style-type: none;
 }
 
+.card {
+  padding: 10px;
+}
+
 .link {
-  color: #6E7E85;
-  font-size: 20px;
+  color: #FF0000;
+  font-size: 18px;
+  font-weight: 500;
   text-decoration: none;
 }
 
