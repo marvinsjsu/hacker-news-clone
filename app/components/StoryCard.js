@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 import { ThemeConsumer } from '../contexts/theme';
+import { getDateTime } from '../utils/time';
 
-export default function StoryCard ({ by, title, kids, score, time, url }) {
-  const dateTime = moment.unix(time).format('M/D/YYYY, h:mm a');
+export default function StoryCard ({ id, by, title, kids, score, time, url }) {
+  const dateTime = getDateTime(time);
 
   return (
     <ThemeConsumer>
@@ -26,7 +27,7 @@ export default function StoryCard ({ by, title, kids, score, time, url }) {
               by
               {` `}
               <Link
-                className={`link user text-${theme === 'light' ? 'dark' : 'light'}`}
+                className={`link underline text-${theme === 'light' ? 'dark' : 'light'}`}
                 to={`/user?id=${by}`}
               >
                 {by}
@@ -34,7 +35,18 @@ export default function StoryCard ({ by, title, kids, score, time, url }) {
               {` `}
               on {dateTime}
               {` `}
-              with {kids && kids.length > 0 && `${kids.length} comments`}
+              {kids && kids.length > 0 && (
+                <React.Fragment>
+                {`with `}
+                <Link
+                  className={`link underline text-${theme === 'light' ? 'dark' : 'light'}`}
+                  to={`/post?id=${id}`}
+                >
+                  {kids.length}
+                </Link>
+                {kids.length > 1 ? ' comments' : ' comment'}
+                </React.Fragment>
+              )}
             </li>
           </ul>
         </div>
@@ -44,6 +56,7 @@ export default function StoryCard ({ by, title, kids, score, time, url }) {
 }
 
 StoryCard.propTypes = {
+  id: PropTypes.number.isRequired,
   by: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   kids: PropTypes.arrayOf(PropTypes.number),

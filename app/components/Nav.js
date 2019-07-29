@@ -3,9 +3,9 @@ import { NavLink } from 'react-router-dom';
 import { ThemeConsumer } from '../contexts/theme';
 
 const activeStyle = {
-  fontSize: '20px',
-  color: 'red',
-};
+  fontSize: 20,
+  color: 'rgb(187, 46, 31)'
+}
 
 export default function Nav () {
   return (
@@ -16,7 +16,7 @@ export default function Nav () {
             <li>
               <NavLink
                 to='/top'
-                className='link'
+                className='nav-link'
                 activeStyle={activeStyle}
               >
                 Top
@@ -25,7 +25,7 @@ export default function Nav () {
             <li>
               <NavLink
                 to='/new'
-                className='link'
+                className='nav-link'
                 activeStyle={activeStyle}
               >
                 New

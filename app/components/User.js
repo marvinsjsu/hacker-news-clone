@@ -10,15 +10,13 @@ function UserProfile ({ id, about, created, karma }) {
   const dateTime = moment.unix(created).format('M/D/YYYY, h:mm a');
 
   return (
-    <div className='row user'>
-      <ul>
-        <li>
-          <h4 className='text-med'>{id}</h4>
-        </li>
-        <li>
+    <div className='row'>
+      <div className='column'>
+        <h4 className='text-med margin-none'>{id}</h4>
+        <p className='margin-none'>
           joined {dateTime} has {karma.toLocaleString()} karma
-        </li>
-      </ul>
+        </p>
+      </div>
     </div>
   );
 }
@@ -55,7 +53,6 @@ export default class User extends React.Component {
         <Loading text='Loading User' />
       );
     }
-
 
     return (
       <div className='card'>

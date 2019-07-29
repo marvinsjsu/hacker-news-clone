@@ -13,7 +13,13 @@ body {
 .row {
   display: flex;
   flex-direction: row;
-  padding: 0 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
 }
 
 .space-between {
@@ -38,7 +44,7 @@ body {
 }
 
 .light, .dark {
-  padding: 50px 100px;
+  padding: 30px 120px;
   min-height: 100%;
 }
 
@@ -52,11 +58,18 @@ li {
 }
 
 .card {
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .link {
   color: #D90429;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav-link {
+  color: #00171F;
   font-size: 18px;
   font-weight: 500;
   text-decoration: none;
@@ -90,7 +103,7 @@ li {
 
 .nav li {
   display: inline-block;
-  padding: 10px;
+  padding: 5px;
 }
 
 .story-title a {
@@ -101,7 +114,7 @@ li {
   font-size: 15px;
 }
 
-.user {
+.underline {
   text-decoration: underline;
 }
 
@@ -113,3 +126,28 @@ li {
   color: #8D99AE;
 }
 
+.comment {
+  background: #50514F;
+  padding: 5px 20px;
+  margin: 10px 0;
+  border-radius: 3px;
+}
+
+.comment-dark {
+  background: #457B9D;
+  color: #F1FAEE;
+}
+
+.comment-light {
+  background: #DBE9EE;
+}
+
+.text-med {
+  font-size: 28px;
+}
+
+.margin-none {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+}

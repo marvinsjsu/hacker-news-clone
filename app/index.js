@@ -5,6 +5,7 @@ import Nav from './components/Nav';
 import Top from './components/Top';
 import New from './components/New';
 import User from './components/User';
+import Post from './components/Post';
 
 import { ThemeProvider } from './contexts/theme';
 
@@ -32,6 +33,8 @@ class App extends React.Component {
               <Route exact path='/top' component={Top} />
               <Route exact path='/user' component={User} />
               <Route exact path='/new' component={New} />
+              <Route exact path='/post' component={Post} />
+
             </Switch>
           </Router>
         </div>
