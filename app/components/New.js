@@ -24,13 +24,13 @@ export default class New extends React.Component {
 
     return (
       <ul>
-      {stories && stories.length > 0 && (
-        stories.map((story) => (
-          <li key={story.id} className='row story'>
-            <StoryCard {...story} />
-          </li>
-        ))
-      )}
+        {stories && stories.length > 0 && (
+          stories.map((story) => (
+            <li key={story.id} className='row story'>
+              <StoryCard {...story} />
+            </li>
+          ))
+        )}
       </ul>
     );
   }
